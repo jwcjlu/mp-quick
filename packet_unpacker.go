@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/wire"
+	"mp-quic/qerr"
 )
 
 type unpackedPacket struct {

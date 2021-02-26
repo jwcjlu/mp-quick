@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	quic "github.com/lucas-clemente/quic-go"
+	quic "mp-quic"
 
-	"github.com/lucas-clemente/quic-go/h2quic"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"mp-quic/h2quic"
+	"mp-quic/internal/utils"
 )
 
 func main() {

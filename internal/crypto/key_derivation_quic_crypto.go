@@ -5,8 +5,8 @@ import (
 	"crypto/sha256"
 	"io"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
 
 	"golang.org/x/crypto/hkdf"
 )

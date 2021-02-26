@@ -4,10 +4,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/congestion"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"mp-quic/congestion"
+	"mp-quic/internal/handshake"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
 )
 
 type flowController struct {

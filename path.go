@@ -3,12 +3,12 @@ package quic
 import (
 	"time"
 
-	"github.com/lucas-clemente/quic-go/ackhandler"
-	"github.com/lucas-clemente/quic-go/congestion"
-	"github.com/lucas-clemente/quic-go/qerr"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"mp-quic/ackhandler"
+	"mp-quic/congestion"
+	"mp-quic/qerr"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
+	"mp-quic/internal/wire"
 )
 
 const (

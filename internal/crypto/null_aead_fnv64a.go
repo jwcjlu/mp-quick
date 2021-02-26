@@ -5,7 +5,7 @@ import (
 	"errors"
 	"hash/fnv"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"mp-quic/internal/protocol"
 )
 
 type nullAEADFNV64a struct{}

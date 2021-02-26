@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/congestion"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"mp-quic/congestion"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
+	"mp-quic/internal/wire"
 )
 
 type pathManager struct {

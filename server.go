@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"mp-quic/internal/crypto"
+	"mp-quic/internal/handshake"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
+	"mp-quic/internal/wire"
+	"mp-quic/qerr"
 )
 
 // packetHandler handles packets

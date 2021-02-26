@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"encoding/binary"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"mp-quic/internal/protocol"
 )
 
 // GenerateConnectionID generates a connection ID using cryptographic random

@@ -6,9 +6,9 @@ import (
 	"io"
 	"math"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
+	"mp-quic/qerr"
 )
 
 // A ConnectionCloseFrame in QUIC

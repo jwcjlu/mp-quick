@@ -3,9 +3,9 @@ package ackhandler
 import (
 	"time"
 
-	"github.com/lucas-clemente/quic-go/congestion"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"mp-quic/congestion"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/wire"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

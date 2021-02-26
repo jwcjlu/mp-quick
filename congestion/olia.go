@@ -1,8 +1,8 @@
 package congestion
 
 import (
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"mp-quic/internal/protocol"
+	"mp-quic/internal/utils"
 )
 
 const scale uint = 10

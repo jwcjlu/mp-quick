@@ -6,7 +6,7 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"mp-quic/internal/protocol"
 )
 
 type aeadAESGCM struct {
