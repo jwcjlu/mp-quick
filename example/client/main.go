@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"crypto/tls"
 	"flag"
 	"io"
 	"log"
@@ -17,7 +18,7 @@ import (
 
 func main() {
 	verbose := flag.Bool("v", false, "verbose")
-	multipath := flag.Bool("m", false, "multipath")
+	multipath := flag.Bool("m", true, "multipath")
 	output := flag.String("o", "", "logging output")
 	flag.Parse()
 	urls := flag.Args()
@@ -37,13 +38,16 @@ func main() {
 		defer logfile.Close()
 		log.SetOutput(logfile)
 	}
+	if len(urls) < 1 {
+		urls = []string{"https://127.0.0.1:6121/aaa"}
+	}
 
 	quicConfig := &quic.Config{
 		CreatePaths: *multipath,
 	}
 
 	hclient := &http.Client{
-		Transport: &h2quic.RoundTripper{QuicConfig: quicConfig},
+		Transport: &h2quic.RoundTripper{QuicConfig: quicConfig, TLSClientConfig: &tls.Config{InsecureSkipVerify: true}},
 	}
 
 	var wg sync.WaitGroup

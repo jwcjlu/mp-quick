@@ -96,11 +96,12 @@ listenLoop:
 		if err != nil {
 			// XXX (QDC): as soon as a path failed, kill the connection.
 			// TODO (QDC): be more resilient in the future without breaking expectations
-			select {
-			case pcm.errorConn <- err:
-			default:
-				// Don't block
-			}
+			utils.Errorf("addr [%s] error %v", pconn.LocalAddr(), err)
+			/*		select {
+					case pcm.errorConn <- err:
+					default:
+						// Don't block
+					}*/
 			break listenLoop
 			// if pconn == pconnAny {
 
@@ -169,7 +170,7 @@ func (pcm *pconnManager) createPconn(ip net.IP) (*net.UDPAddr, error) {
 	//	listenAddrStr = "[" + ip.String() + "]:0"
 	//}
 	// pconn, err := reuse.ListenPacket("udp", listenAddrStr)
-	pconn, err := net.ListenUDP("udp", &net.UDPAddr{IP: ip, Port: 0})
+	pconn, err := net.ListenUDP("udp", &net.UDPAddr{IP: ip, Port: 0}) //0代表动态绑定端口
 	if err != nil {
 		return nil, err
 	}
@@ -200,6 +201,7 @@ func (pcm *pconnManager) createPconns() error {
 	}
 	for _, i := range ifaces {
 		// TODO (QDC): do this in a generic way
+		//wlan 无线网络  eth 有限网络  rmnet 高通moderm
 		if !strings.Contains(i.Name, "eth") && !strings.Contains(i.Name, "rmnet") && !strings.Contains(i.Name, "wlan") {
 			continue
 		}
